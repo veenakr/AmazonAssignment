@@ -1,0 +1,42 @@
+.profile-image {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.chips {
+  display: flex;
+  align-items: center;
+  background-color: #e5e7e8;
+  border-radius: 30px;
+  position: relative;
+  margin: 5px;
+}
+
+.chips > span {
+  padding: 0 10px;
+}
+
+.close {
+  width: 20px;
+  height: 20px;
+  opacity: 0.3;
+}
+.close:hover {
+  opacity: 1;
+}
+.close:before,
+.close:after {
+  position: absolute;
+  right: 15px;
+  content: " ";
+  height: 20px;
+  width: 2px;
+  background-color: #333;
+}
+.close:before {
+  transform: rotate(45deg);
+}
+.close:after {
+  transform: rotate(-45deg);
+}

@@ -1,0 +1,44 @@
+.input-field {
+  border: none;
+  height: 50px;
+  font-size: 2em;
+  position: relative;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+.dropdown {
+  position: absolute;
+  border: 1px solid #e5e7e8;
+  width: 300px;
+  max-height: 300px;
+  overflow: auto;
+}
+
+.dropdown-item {
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.dropdown-item:hover {
+  background-color: #e5e7e8;
+}
+
+.profile-images {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid green;
+}
