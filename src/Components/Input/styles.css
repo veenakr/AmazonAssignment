@@ -3,6 +3,7 @@
   height: 50px;
   font-size: 2em;
   position: relative;
+  padding-left: 10px;
 }
 
 textarea:focus,
@@ -13,18 +14,19 @@ input:focus {
 .dropdown {
   position: absolute;
   border: 1px solid #e5e7e8;
-  width: 300px;
+  width: 100%;
   max-height: 300px;
   overflow: auto;
+  margin: 10px;
 }
 
 .dropdown-item {
   height: 50px;
   display: flex;
-  justify-content: space-around;
   align-items: center;
   cursor: pointer;
   width: 100%;
+  padding: 10px;
 }
 
 .dropdown-item:hover {
@@ -35,6 +37,7 @@ input:focus {
   height: 30px;
   width: 30px;
   border-radius: 50%;
+  margin-right: 10px;
 }
 
 .header {

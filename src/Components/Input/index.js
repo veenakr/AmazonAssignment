@@ -4,13 +4,13 @@ import "./styles.css";
 
 const MemoizedChips = React.memo(Chips);
 
-export default class Input extends React.Component {
+export default class InputComponent extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       filtered: props.data,
       selected: [],
-      searchTerm: "",
+      searchItem: "",
       highlight: false,
       count: 0
     };
@@ -27,7 +27,7 @@ export default class Input extends React.Component {
     if (value) {
       filtered = data.filter(item => item.name.toLowerCase().includes(value));
     }
-    this.setState({ filtered, searchTerm: value, highlight: false, count: 0 });
+    this.setState({ filtered, searchItem: value, highlight: false, count: 0 });
   };
 
   handleSelect = id => {
@@ -36,7 +36,7 @@ export default class Input extends React.Component {
     selectedNew = filtered.filter(item => item.id === id);
     filtered = filtered.filter(item => item.id !== id);
     selected = selected.concat(selectedNew);
-    this.setState({ selected, filtered, searchTerm: "" });
+    this.setState({ selected, filtered, searchItem: "" });
     this.nameInput.focus();
   };
 
@@ -63,9 +63,9 @@ export default class Input extends React.Component {
   };
 
   render() {
-    const { filtered, selected, searchTerm, highlight } = this.state;
+    const { filtered, selected, searchItem, highlight } = this.state;
     const style = {
-      background: "red"
+      background: "gray"
     };
     let value;
     if (selected.length > 0) {
@@ -88,7 +88,7 @@ export default class Input extends React.Component {
             }}
             className="input-field"
             onChange={this.handleChange}
-            value={searchTerm}
+            value={searchItem}
             onKeyDown={this.onKeyDown}
           />
         </div>

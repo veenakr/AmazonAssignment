@@ -1,12 +1,12 @@
 import React from "react";
-import Input from "./Components/Input";
-import { userData } from "./Utils/Constants";
+import InputComponent from "./Components/Input";
+import { userData } from "./Constants";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <Input data={userData} />
+      <InputComponent data={userData} />
     </div>
   );
 }
